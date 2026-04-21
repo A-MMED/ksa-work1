@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kingdom of Saudi Arabia | المملكة العربية السعودية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;800&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">&#x2605;</span>
+        <span class="logo-text-en" data-lang="en">Kingdom of Saudi Arabia</span>
+        <span class="logo-text-ar" data-lang="ar">المملكة العربية السعودية</span>
+      </div>
+      <div class="nav-links">
+        <a href="#foundations" data-en="Foundations" data-ar="التأسيس">Foundations</a>
+        <a href="#identity" data-en="National Identity" data-ar="الهوية الوطنية">National Identity</a>
+        <a href="#founding-day" data-en="Founding Day" data-ar="يوم التأسيس">Founding Day</a>
+        <a href="#national-day" data-en="National Day" data-ar="اليوم الوطني">National Day</a>
+        <a href="#flag-day" data-en="Flag Day" data-ar="يوم العلم">Flag Day</a>
+      </div>
+      <button class="lang-toggle" id="langToggle" onclick="toggleLanguage()">
+        <span class="lang-icon">🌐</span>
+        <span id="langLabel">العربية</span>
+      </button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#foundations" onclick="toggleMenu()" data-en="Foundations" data-ar="التأسيس">Foundations</a>
+      <a href="#identity" onclick="toggleMenu()" data-en="National Identity" data-ar="الهوية الوطنية">National Identity</a>
+      <a href="#founding-day" onclick="toggleMenu()" data-en="Founding Day" data-ar="يوم التأسيس">Founding Day</a>
+      <a href="#national-day" onclick="toggleMenu()" data-en="National Day" data-ar="اليوم الوطني">National Day</a>
+      <a href="#flag-day" onclick="toggleMenu()" data-en="Flag Day" data-ar="يوم العلم">Flag Day</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge" data-en="Est. 1727" data-ar="تأسست عام ١٧٢٧">Est. 1727</div>
+      <h1 class="hero-title-en" data-lang="en">Kingdom of Saudi Arabia</h1>
+      <h1 class="hero-title-ar" data-lang="ar">المملكة العربية السعودية</h1>
+      <p class="hero-subtitle-en" data-lang="en">A journey through history, identity, and national pride</p>
+      <p class="hero-subtitle-ar" data-lang="ar">رحلة عبر التاريخ والهوية والفخر الوطني</p>
+      <div class="hero-scroll-hint">
+        <span data-en="Scroll to explore" data-ar="مرر للاستكشاف">Scroll to explore</span>
+        <div class="scroll-arrow">&#8595;</div>
+      </div>
+    </div>
+    <div class="hero-flag-strip"></div>
+  </header>
+
+  <!-- ===== SECTION 1: FOUNDATIONS ===== -->
+  <section class="section section-light" id="foundations">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-number">01</div>
+        <div class="section-title-wrap">
+          <h2 class="section-title" data-en="Foundations of the Kingdom" data-ar="أسس المملكة العربية السعودية">Foundations of the Kingdom</h2>
+          <p class="section-subtitle" data-en="The roots of a great nation" data-ar="جذور أمة عظيمة">The roots of a great nation</p>
+        </div>
+      </div>
+
+      <div class="content-grid two-col">
+        <div class="content-text">
+          <div class="info-card">
+            <div class="card-icon">&#128197;</div>
+            <h3 data-en="When Was the First Saudi State Founded?" data-ar="متى تأسست الدولة السعودية الأولى؟">When Was the First Saudi State Founded?</h3>
+            <p data-en="The First Saudi State was established in <strong>1139 AH / 1727 AD</strong> in the city of <strong>Diriyah</strong>, located in the heart of the Arabian Peninsula in the Najd region. This historic event marked the beginning of a continuous political and civilizational legacy that spans nearly three centuries." data-ar="تأسست الدولة السعودية الأولى عام <strong>١١٣٩هـ / ١٧٢٧م</strong> في مدينة <strong>الدرعية</strong> الواقعة في قلب الجزيرة العربية بمنطقة نجد. وقد مثّل هذا الحدث التاريخي بداية إرث سياسي وحضاري متواصل يمتد لما يقارب ثلاثة قرون.">The First Saudi State was established in <strong>1139 AH / 1727 AD</strong> in the city of <strong>Diriyah</strong>, located in the heart of the Arabian Peninsula in the Najd region. This historic event marked the beginning of a continuous political and civilizational legacy that spans nearly three centuries.</p>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">&#128081;</div>
+            <h3 data-en="Who Is the Founder?" data-ar="من هو المؤسس؟">Who Is the Founder?</h3>
+            <p data-en="The founder of the First Saudi State is <strong>Imam Muhammad bin Saud Al Muqrin</strong> (died 1765 AD). He was the Emir of Diriyah who, on <strong>February 22, 1727</strong>, assumed leadership and forged a historic alliance with the Islamic scholar <strong>Sheikh Muhammad ibn Abd al-Wahhab</strong>, combining political authority with religious reform to build a strong and unified state." data-ar="مؤسس الدولة السعودية الأولى هو <strong>الإمام محمد بن سعود بن محمد المقرن</strong> (توفي عام ١٧٦٥م). كان أمير الدرعية الذي تولّى الحكم في <strong>٢٢ فبراير ١٧٢٧م</strong>، وأبرم تحالفًا تاريخيًا مع العالم الإسلامي <strong>الشيخ محمد بن عبد الوهاب</strong>، جمع بين السلطة السياسية والإصلاح الديني لبناء دولة قوية وموحدة.">The founder of the First Saudi State is <strong>Imam Muhammad bin Saud Al Muqrin</strong> (died 1765 AD). He was the Emir of Diriyah who, on <strong>February 22, 1727</strong>, assumed leadership and forged a historic alliance with the Islamic scholar <strong>Sheikh Muhammad ibn Abd al-Wahhab</strong>, combining political authority with religious reform to build a strong and unified state.</p>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">&#10024;</div>
+            <h3 data-en="Core Founding Values" data-ar="أبرز القيم التأسيسية">Core Founding Values</h3>
+            <div class="values-list">
+              <div class="value-item">
+                <span class="value-dot"></span>
+                <div>
+                  <strong data-en="Islamic Faith" data-ar="العقيدة الإسلامية">Islamic Faith</strong>
+                  <p data-en="The state was founded on the principles of Islam, with the Holy Quran and the Sunnah as its constitution." data-ar="قامت الدولة على مبادئ الإسلام، واتخذت القرآن الكريم والسنة النبوية دستورًا لها.">The state was founded on the principles of Islam, with the Holy Quran and the Sunnah as its constitution.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-dot"></span>
+                <div>
+                  <strong data-en="Justice & Governance" data-ar="العدل والحوكمة">Justice & Governance</strong>
+                  <p data-en="Upholding justice among all citizens and establishing fair governance as a cornerstone of the state." data-ar="إقامة العدل بين جميع المواطنين وترسيخ الحكم العادل ركيزةً أساسية للدولة.">Upholding justice among all citizens and establishing fair governance as a cornerstone of the state.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-dot"></span>
+                <div>
+                  <strong data-en="Unity & Solidarity" data-ar="الوحدة والتضامن">Unity & Solidarity</strong>
+                  <p data-en="Unifying the tribes and regions of the Arabian Peninsula under one banner and one leadership." data-ar="توحيد قبائل ومناطق الجزيرة العربية تحت راية واحدة وقيادة واحدة.">Unifying the tribes and regions of the Arabian Peninsula under one banner and one leadership.</p>
+                </div>
+              </div>
+              <div class="value-item">
+                <span class="value-dot"></span>
+                <div>
+                  <strong data-en="Security & Stability" data-ar="الأمن والاستقرار">Security & Stability</strong>
+                  <p data-en="Providing safety and security for all citizens as a fundamental duty of the state." data-ar="توفير الأمن والاستقرار لجميع المواطنين باعتباره واجبًا أساسيًا للدولة.">Providing safety and security for all citizens as a fundamental duty of the state.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-image-wrap">
+          <div class="image-frame">
+            <img src="images/diriyah.jpg" alt="Diriyah - First Saudi Capital" loading="lazy" />
+            <div class="image-caption">
+              <span data-en="Diriyah — Capital of the First Saudi State" data-ar="الدرعية — عاصمة الدولة السعودية الأولى">Diriyah — Capital of the First Saudi State</span>
+            </div>
+          </div>
+          <div class="image-frame mt-20">
+            <img src="images/diriyah2.jpg" alt="At-Turaif UNESCO Heritage Site" loading="lazy" />
+            <div class="image-caption">
+              <span data-en="At-Turaif District — UNESCO World Heritage Site" data-ar="حي الطريف — موقع تراث عالمي لليونسكو">At-Turaif District — UNESCO World Heritage Site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: NATIONAL IDENTITY ===== -->
+  <section class="section section-dark" id="identity">
+    <div class="container">
+      <div class="section-header light">
+        <div class="section-number">02</div>
+        <div class="section-title-wrap">
+          <h2 class="section-title" data-en="National Identity" data-ar="الهوية الوطنية">National Identity</h2>
+          <p class="section-subtitle" data-en="What unites us as one people" data-ar="ما يجمعنا كشعب واحد">What unites us as one people</p>
+        </div>
+      </div>
+
+      <div class="identity-intro">
+        <div class="quote-block">
+          <div class="quote-icon">&ldquo;</div>
+          <p data-en="National identity is the sense of belonging to a homeland — a shared set of values, history, language, religion, and culture that defines who we are as a people and binds us together across generations." data-ar="الهوية الوطنية هي الشعور بالانتماء إلى الوطن — مجموعة مشتركة من القيم والتاريخ واللغة والدين والثقافة التي تحدد هويتنا كشعب وتربطنا معًا عبر الأجيال.">National identity is the sense of belonging to a homeland — a shared set of values, history, language, religion, and culture that defines who we are as a people and binds us together across generations.</p>
+        </div>
+      </div>
+
+      <div class="components-grid">
+        <div class="component-card">
+          <div class="comp-icon">&#9654;</div>
+          <h3 data-en="Islamic Religion" data-ar="الدين الإسلامي">Islamic Religion</h3>
+          <p data-en="Islam is the foundation of Saudi national identity. The Kingdom serves as the guardian of the Two Holy Mosques and upholds Islamic values in all aspects of public and private life." data-ar="الإسلام هو أساس الهوية الوطنية السعودية. تضطلع المملكة بمهمة خادم الحرمين الشريفين وتُعلي القيم الإسلامية في جميع جوانب الحياة العامة والخاصة.">Islam is the foundation of Saudi national identity. The Kingdom serves as the guardian of the Two Holy Mosques and upholds Islamic values in all aspects of public and private life.</p>
+        </div>
+        <div class="component-card">
+          <div class="comp-icon">&#128483;</div>
+          <h3 data-en="Arabic Language" data-ar="اللغة العربية">Arabic Language</h3>
+          <p data-en="Arabic is the official language of the Kingdom and a pillar of national identity. It is the language of the Holy Quran and a vessel of Saudi culture, literature, and heritage." data-ar="العربية هي اللغة الرسمية للمملكة وركيزة من ركائز الهوية الوطنية. إنها لغة القرآن الكريم ووعاء الثقافة والأدب والتراث السعودي.">Arabic is the official language of the Kingdom and a pillar of national identity. It is the language of the Holy Quran and a vessel of Saudi culture, literature, and heritage.</p>
+        </div>
+        <div class="component-card">
+          <div class="comp-icon">&#127963;</div>
+          <h3 data-en="History & Heritage" data-ar="التاريخ والتراث">History & Heritage</h3>
+          <p data-en="Nearly three centuries of continuous statehood, from the First Saudi State in Diriyah to the modern Kingdom, form a rich historical tapestry that every Saudi citizen shares." data-ar="ما يقارب ثلاثة قرون من الدولة المتواصلة، من الدولة السعودية الأولى في الدرعية إلى المملكة الحديثة، تشكّل نسيجًا تاريخيًا ثريًا يشترك فيه كل مواطن سعودي.">Nearly three centuries of continuous statehood, from the First Saudi State in Diriyah to the modern Kingdom, form a rich historical tapestry that every Saudi citizen shares.</p>
+        </div>
+        <div class="component-card">
+          <div class="comp-icon">&#127981;</div>
+          <h3 data-en="Customs & Traditions" data-ar="العادات والتقاليد">Customs & Traditions</h3>
+          <p data-en="Saudi customs — from hospitality (diyafa) and generosity to traditional dress, poetry, and folk arts — are living expressions of a rich cultural identity passed down through generations." data-ar="العادات السعودية — من الضيافة والكرم إلى الزي التقليدي والشعر والفنون الشعبية — تعبيرات حية عن هوية ثقافية ثرية تتوارثها الأجيال.">Saudi customs — from hospitality (diyafa) and generosity to traditional dress, poetry, and folk arts — are living expressions of a rich cultural identity passed down through generations.</p>
+        </div>
+        <div class="component-card">
+          <div class="comp-icon">&#127757;</div>
+          <h3 data-en="Land & Geography" data-ar="الأرض والجغرافيا">Land & Geography</h3>
+          <p data-en="The vast Arabian Peninsula — with its deserts, mountains, coasts, and oases — is the physical homeland that anchors Saudi identity to a specific place and landscape." data-ar="شبه الجزيرة العربية الشاسعة — بصحاريها وجبالها وسواحلها وواحاتها — هي الوطن المادي الذي يربط الهوية السعودية بمكان محدد وطبيعة بعينها.">The vast Arabian Peninsula — with its deserts, mountains, coasts, and oases — is the physical homeland that anchors Saudi identity to a specific place and landscape.</p>
+        </div>
+        <div class="component-card">
+          <div class="comp-icon">&#128218;</div>
+          <h3 data-en="Vision 2030 & Future" data-ar="رؤية ٢٠٣٠ والمستقبل">Vision 2030 & Future</h3>
+          <p data-en="The modern Saudi identity also embraces ambition and progress. Vision 2030 adds a forward-looking dimension — a shared aspiration for a diversified, innovative, and globally engaged Saudi Arabia." data-ar="تحتضن الهوية السعودية الحديثة أيضًا الطموح والتقدم. تُضيف رؤية ٢٠٣٠ بُعدًا استشرافيًا — تطلعًا مشتركًا نحو مملكة سعودية متنوعة ومبتكرة ومنخرطة في العالم.">Vision 2030 adds a forward-looking dimension — a shared aspiration for a diversified, innovative, and globally engaged Saudi Arabia.</p>
+        </div>
+      </div>
+
+      <div class="belonging-section">
+        <h3 class="belonging-title" data-en="How Does a Citizen Express Belonging?" data-ar="كيف يُعبّر المواطن عن انتمائه لوطنه؟">How Does a Citizen Express Belonging?</h3>
+        <div class="belonging-grid">
+          <div class="belonging-item">
+            <span class="b-num">01</span>
+            <p data-en="Participating in national celebrations and events such as National Day and Founding Day" data-ar="المشاركة في الاحتفالات والفعاليات الوطنية كاليوم الوطني ويوم التأسيس">Participating in national celebrations and events such as National Day and Founding Day</p>
+          </div>
+          <div class="belonging-item">
+            <span class="b-num">02</span>
+            <p data-en="Wearing national dress and displaying the Saudi flag with pride" data-ar="ارتداء الزي الوطني ورفع العلم السعودي بفخر">Wearing national dress and displaying the Saudi flag with pride</p>
+          </div>
+          <div class="belonging-item">
+            <span class="b-num">03</span>
+            <p data-en="Preserving the Arabic language and promoting national culture and heritage" data-ar="الحفاظ على اللغة العربية وتعزيز الثقافة والتراث الوطني">Preserving the Arabic language and promoting national culture and heritage</p>
+          </div>
+          <div class="belonging-item">
+            <span class="b-num">04</span>
+            <p data-en="Contributing to the development of the homeland through work, education, and innovation" data-ar="المساهمة في تنمية الوطن من خلال العمل والتعليم والابتكار">Contributing to the development of the homeland through work, education, and innovation</p>
+          </div>
+          <div class="belonging-item">
+            <span class="b-num">05</span>
+            <p data-en="Upholding the values of loyalty, respect for leadership, and civic responsibility" data-ar="التمسك بقيم الولاء واحترام القيادة والمسؤولية المدنية">Upholding the values of loyalty, respect for leadership, and civic responsibility</p>
+          </div>
+          <div class="belonging-item">
+            <span class="b-num">06</span>
+            <p data-en="Passing down traditions, stories, and values to the next generation" data-ar="توارث التقاليد والقصص والقيم للجيل القادم">Passing down traditions, stories, and values to the next generation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: FOUNDING DAY ===== -->
+  <section class="section section-green" id="founding-day">
+    <div class="container">
+      <div class="section-header light">
+        <div class="section-number">03</div>
+        <div class="section-title-wrap">
+          <h2 class="section-title" data-en="Founding Day" data-ar="يوم التأسيس">Founding Day</h2>
+          <p class="section-subtitle" data-en="Celebrating the birth of a nation" data-ar="احتفاءً بميلاد أمة">Celebrating the birth of a nation</p>
+        </div>
+      </div>
+
+      <div class="day-layout">
+        <div class="day-date-card">
+          <div class="date-display">
+            <span class="date-day">22</span>
+            <span class="date-month" data-en="February" data-ar="فبراير">February</span>
+            <span class="date-year">1727</span>
+          </div>
+          <div class="date-hijri" data-en="22 Rajab 1139 AH" data-ar="٢٢ رجب ١١٣٩هـ">22 Rajab 1139 AH</div>
+          <div class="date-badge" data-en="Annual Public Holiday" data-ar="عطلة رسمية سنوية">Annual Public Holiday</div>
+        </div>
+
+        <div class="day-content">
+          <div class="day-block">
+            <h3 data-en="What Does This Day Represent?" data-ar="ماذا يمثّل هذا اليوم؟">What Does This Day Represent?</h3>
+            <p data-en="Founding Day (يوم التأسيس) commemorates the historic moment on <strong>February 22, 1727</strong>, when Imam Muhammad bin Saud assumed the rulership of Diriyah, marking the official birth of the First Saudi State. This day was officially designated as a national holiday by Royal Decree in 2022, recognizing nearly <strong>300 years of continuous Saudi statehood</strong> — a legacy of governance, Islamic values, and civilizational achievement." data-ar="يوم التأسيس يُحيي الذكرى التاريخية ليوم <strong>٢٢ فبراير ١٧٢٧م</strong>، حين تولّى الإمام محمد بن سعود حكم الدرعية، مُعلنًا الميلاد الرسمي للدولة السعودية الأولى. وقد صدر مرسوم ملكي عام ٢٠٢٢م بتحديد هذا اليوم عطلةً رسمية، اعترافًا بما يقارب <strong>٣٠٠ عام من الدولة السعودية المتواصلة</strong> — إرث من الحكم والقيم الإسلامية والإنجاز الحضاري.">Founding Day (يوم التأسيس) commemorates the historic moment on <strong>February 22, 1727</strong>, when Imam Muhammad bin Saud assumed the rulership of Diriyah, marking the official birth of the First Saudi State. This day was officially designated as a national holiday by Royal Decree in 2022, recognizing nearly <strong>300 years of continuous Saudi statehood</strong>.</p>
+          </div>
+
+          <div class="day-block">
+            <h3 data-en="How Do Citizens Celebrate?" data-ar="كيف يحتفل المواطنون؟">How Do Citizens Celebrate?</h3>
+            <div class="celebration-list">
+              <div class="cel-item">
+                <span class="cel-icon">🏛️</span>
+                <p data-en="Historical exhibitions and tours of Diriyah and At-Turaif UNESCO heritage site" data-ar="معارض تاريخية وجولات في الدرعية وحي الطريف التراثي المدرج على قائمة اليونسكو">Historical exhibitions and tours of Diriyah and At-Turaif UNESCO heritage site</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">🎭</span>
+                <p data-en="Cultural performances, traditional arts, poetry, and folk music events" data-ar="عروض ثقافية وفنون تقليدية وأمسيات شعرية وفعاليات موسيقى شعبية">Cultural performances, traditional arts, poetry, and folk music events</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">📚</span>
+                <p data-en="Educational programs in schools highlighting the history of the Saudi state" data-ar="برامج تعليمية في المدارس تُبرز تاريخ الدولة السعودية">Educational programs in schools highlighting the history of the Saudi state</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">🎆</span>
+                <p data-en="Fireworks displays, light shows, and public festivities across the Kingdom" data-ar="عروض الألعاب النارية والإضاءة والاحتفالات الشعبية في أرجاء المملكة">Fireworks displays, light shows, and public festivities across the Kingdom</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">🟢</span>
+                <p data-en="Wearing the national color green and displaying the Saudi flag on homes and vehicles" data-ar="ارتداء اللون الوطني الأخضر ورفع العلم السعودي على المنازل والمركبات">Wearing the national color green and displaying the Saudi flag on homes and vehicles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: NATIONAL DAY ===== -->
+  <section class="section section-light" id="national-day">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-number">04</div>
+        <div class="section-title-wrap">
+          <h2 class="section-title" data-en="National Day" data-ar="اليوم الوطني">National Day</h2>
+          <p class="section-subtitle" data-en="Unity, pride, and celebration" data-ar="الوحدة والفخر والاحتفال">Unity, pride, and celebration</p>
+        </div>
+      </div>
+
+      <div class="content-grid two-col reverse">
+        <div class="content-image-wrap">
+          <div class="image-frame">
+            <img src="images/national_day.png" alt="Saudi National Day Celebration" loading="lazy" />
+            <div class="image-caption">
+              <span data-en="Citizens celebrating Saudi National Day" data-ar="المواطنون يحتفلون باليوم الوطني السعودي">Citizens celebrating Saudi National Day</span>
+            </div>
+          </div>
+          <div class="image-frame mt-20">
+            <img src="images/fireworks.jpg" alt="National Day Fireworks" loading="lazy" />
+            <div class="image-caption">
+              <span data-en="Fireworks illuminating the Saudi sky on National Day" data-ar="الألعاب النارية تُضيء السماء السعودية في اليوم الوطني">Fireworks illuminating the Saudi sky on National Day</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-text">
+          <div class="info-card highlight">
+            <div class="card-icon">&#128197;</div>
+            <h3 data-en="When Is It Celebrated?" data-ar="متى يُحتفل به؟">When Is It Celebrated?</h3>
+            <div class="date-inline">
+              <span class="date-big">23</span>
+              <div>
+                <span class="date-month-sm" data-en="September" data-ar="سبتمبر">September</span>
+                <span class="date-note" data-en="Every year — Annual Public Holiday" data-ar="كل عام — عطلة رسمية سنوية">Every year — Annual Public Holiday</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">&#127981;</div>
+            <h3 data-en="What Event Does It Commemorate?" data-ar="ما الحدث الذي يُحيي ذكراه؟">What Event Does It Commemorate?</h3>
+            <p data-en="Saudi National Day commemorates the historic proclamation made on <strong>September 23, 1932</strong>, by King <strong>Abdulaziz bin Abdul Rahman Al Saud (Ibn Saud)</strong>, who officially unified the Kingdom of Nejd and Hejaz and renamed it the <strong>Kingdom of Saudi Arabia</strong>. This unification brought together the diverse regions of the Arabian Peninsula under one flag, one name, and one leadership — creating the modern Saudi state we know today." data-ar="يُحيي اليوم الوطني السعودي ذكرى الإعلان التاريخي في <strong>٢٣ سبتمبر ١٩٣٢م</strong>، الذي أصدره الملك <strong>عبد العزيز بن عبد الرحمن آل سعود (ابن سعود)</strong>، حين وحّد رسميًا مملكة نجد والحجاز وأعاد تسميتها <strong>المملكة العربية السعودية</strong>. جمعت هذه الوحدة مناطق الجزيرة العربية المتعددة تحت علم واحد واسم واحد وقيادة واحدة — لتُولد الدولة السعودية الحديثة التي نعرفها اليوم.">Saudi National Day commemorates the historic proclamation made on <strong>September 23, 1932</strong>, by King <strong>Abdulaziz bin Abdul Rahman Al Saud (Ibn Saud)</strong>, who officially unified the Kingdom of Nejd and Hejaz and renamed it the <strong>Kingdom of Saudi Arabia</strong>.</p>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">&#127881;</div>
+            <h3 data-en="Aspects of Celebration" data-ar="مظاهر الاحتفال">Aspects of Celebration</h3>
+            <div class="celebration-list compact">
+              <div class="cel-item">
+                <span class="cel-icon">🎇</span>
+                <p data-en="Grand fireworks displays in major cities including Riyadh, Jeddah, and Dammam" data-ar="عروض ألعاب نارية كبرى في المدن الرئيسية كالرياض وجدة والدمام">Grand fireworks displays in major cities</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">🟢</span>
+                <p data-en="Citizens dress in green and decorate their homes, cars, and streets with the national flag" data-ar="يرتدي المواطنون الأخضر ويُزيّنون منازلهم وسياراتهم وشوارعهم بالعلم الوطني">Citizens dress in green and decorate homes and streets</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">🎤</span>
+                <p data-en="Concerts, theatrical performances, and national song events broadcast nationwide" data-ar="حفلات موسيقية وعروض مسرحية وأمسيات أغاني وطنية تُبثّ على المستوى الوطني">Concerts, theatrical performances, and national song events</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">✈️</span>
+                <p data-en="Air shows by the Saudi Hawks aerobatic team painting the sky in national colors" data-ar="عروض جوية لفريق الصقور السعودي يرسم السماء بالألوان الوطنية">Air shows by the Saudi Hawks aerobatic team</p>
+              </div>
+              <div class="cel-item">
+                <span class="cel-icon">🍽️</span>
+                <p data-en="Traditional Saudi food festivals and cultural markets celebrating local heritage" data-ar="مهرجانات الطعام السعودي التقليدي والأسواق الثقافية التي تحتفي بالتراث المحلي">Traditional food festivals and cultural markets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: FLAG DAY ===== -->
+  <section class="section section-dark" id="flag-day">
+    <div class="container">
+      <div class="section-header light">
+        <div class="section-number">05</div>
+        <div class="section-title-wrap">
+          <h2 class="section-title" data-en="Flag Day" data-ar="يوم العلم">Flag Day</h2>
+          <p class="section-subtitle" data-en="The symbol of sovereignty and faith" data-ar="رمز السيادة والإيمان">The symbol of sovereignty and faith</p>
+        </div>
+      </div>
+
+      <div class="flag-layout">
+        <div class="flag-visual-col">
+          <div class="flag-display-wrap">
+            <img src="images/flag.jpg" alt="Saudi Arabia Flag" class="flag-img" loading="lazy" />
+          </div>
+          <div class="flag-date-card">
+            <div class="date-display small">
+              <span class="date-day">11</span>
+              <span class="date-month" data-en="March" data-ar="مارس">March</span>
+            </div>
+            <p data-en="Celebrated annually every March 11" data-ar="يُحتفل به سنويًا كل ١١ مارس">Celebrated annually every March 11</p>
+          </div>
+        </div>
+
+        <div class="flag-content-col">
+          <div class="flag-symbolism">
+            <h3 data-en="What Does the Saudi Flag Symbolize?" data-ar="ماذا يرمز العلم السعودي؟">What Does the Saudi Flag Symbolize?</h3>
+            <div class="symbol-grid">
+              <div class="symbol-card green-bg">
+                <div class="symbol-swatch green-swatch"></div>
+                <div>
+                  <strong data-en="Green Color" data-ar="اللون الأخضر">Green Color</strong>
+                  <p data-en="Represents Islam and the prosperity of the land. Green is the color traditionally associated with the Prophet Muhammad (PBUH) and the Islamic faith." data-ar="يمثّل الإسلام وازدهار الأرض. الأخضر هو اللون المرتبط تقليديًا بالنبي محمد ﷺ والإيمان الإسلامي.">Represents Islam and the prosperity of the land.</p>
+                </div>
+              </div>
+              <div class="symbol-card">
+                <div class="symbol-icon">&#9876;</div>
+                <div>
+                  <strong data-en="The Sword" data-ar="السيف">The Sword</strong>
+                  <p data-en="Symbolizes justice, strength, and the readiness to defend the nation and its values. It represents the military power and the resolve to uphold righteousness." data-ar="يرمز إلى العدل والقوة والاستعداد للدفاع عن الوطن وقيمه. ويمثّل القوة العسكرية والعزم على إقامة الحق.">Symbolizes justice, strength, and the readiness to defend the nation.</p>
+                </div>
+              </div>
+              <div class="symbol-card">
+                <div class="symbol-icon">&#9786;</div>
+                <div>
+                  <strong data-en="The Shahada" data-ar="الشهادة">The Shahada</strong>
+                  <p data-en="'There is no god but Allah, and Muhammad is His Messenger' — the Islamic declaration of faith inscribed on the flag, affirming the Kingdom's foundation on Islamic monotheism." data-ar="«لا إله إلا الله محمد رسول الله» — شهادة الإسلام المكتوبة على العلم، تؤكد قيام المملكة على التوحيد الإسلامي.">The Islamic declaration of faith inscribed on the flag.</p>
+                </div>
+              </div>
+              <div class="symbol-card">
+                <div class="symbol-icon">&#9733;</div>
+                <div>
+                  <strong data-en="White Color" data-ar="اللون الأبيض">White Color</strong>
+                  <p data-en="The white of the Shahada and sword represents purity, peace, and the clarity of the Islamic message upon which the state was founded." data-ar="يمثّل أبيض الشهادة والسيف الطهارة والسلام ووضوح الرسالة الإسلامية التي قامت عليها الدولة.">Represents purity, peace, and the clarity of the Islamic message.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flag-why">
+            <h3 data-en="Why Was a Day Dedicated to the Flag?" data-ar="لماذا خُصِّص يوم للعلم؟">Why Was a Day Dedicated to the Flag?</h3>
+            <p data-en="Saudi Flag Day, observed on <strong>March 11</strong> each year, was established to honor the national flag as a supreme symbol of Saudi sovereignty, unity, and identity. The date commemorates the adoption of the standardized version of the Saudi flag. The day serves to deepen citizens' pride in their flag, educate new generations about its symbolism, and reinforce the values of loyalty and belonging to the homeland. It is a reminder that the flag is not merely a piece of cloth — it is a living symbol of the Kingdom's history, faith, and aspirations." data-ar="يوم العلم السعودي، الذي يُحتفل به في <strong>١١ مارس</strong> من كل عام، أُسِّس تكريمًا للعلم الوطني بوصفه رمزًا أسمى للسيادة السعودية والوحدة والهوية. ويُحيي هذا التاريخ ذكرى اعتماد النسخة الموحدة من العلم السعودي. ويهدف اليوم إلى تعميق فخر المواطنين بعلمهم، وتثقيف الأجيال الجديدة حول رمزيته، وتعزيز قيم الولاء والانتماء للوطن. إنه تذكير بأن العلم ليس مجرد قطعة قماش — بل هو رمز حي لتاريخ المملكة وإيمانها وتطلعاتها.">Saudi Flag Day, observed on <strong>March 11</strong> each year, was established to honor the national flag as a supreme symbol of Saudi sovereignty, unity, and identity. The day serves to deepen citizens' pride in their flag, educate new generations about its symbolism, and reinforce the values of loyalty and belonging to the homeland.</p>
+
+            <div class="flag-celebration">
+              <h4 data-en="How Is Flag Day Celebrated?" data-ar="كيف يُحتفل بيوم العلم؟">How Is Flag Day Celebrated?</h4>
+              <div class="celebration-list compact">
+                <div class="cel-item">
+                  <span class="cel-icon">🚩</span>
+                  <p data-en="Raising the Saudi flag on all government buildings, schools, and public spaces" data-ar="رفع العلم السعودي على جميع المباني الحكومية والمدارس والأماكن العامة">Raising the Saudi flag on all government buildings and public spaces</p>
+                </div>
+                <div class="cel-item">
+                  <span class="cel-icon">📖</span>
+                  <p data-en="Educational activities and workshops about the history and symbolism of the flag" data-ar="أنشطة تعليمية وورش عمل حول تاريخ العلم ورمزيته">Educational activities about the history and symbolism of the flag</p>
+                </div>
+                <div class="cel-item">
+                  <span class="cel-icon">🎨</span>
+                  <p data-en="Art competitions and creative projects for students featuring the national flag" data-ar="مسابقات فنية ومشاريع إبداعية للطلاب تتمحور حول العلم الوطني">Art competitions and creative projects for students</p>
+                </div>
+                <div class="cel-item">
+                  <span class="cel-icon">📱</span>
+                  <p data-en="Social media campaigns with citizens sharing photos of the flag and expressing national pride" data-ar="حملات على وسائل التواصل الاجتماعي يشارك فيها المواطنون صور العلم معبّرين عن فخرهم الوطني">Social media campaigns expressing national pride</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE ===== -->
+  <section class="section section-timeline">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-number">&#9733;</div>
+        <div class="section-title-wrap">
+          <h2 class="section-title" data-en="Key Dates in Saudi History" data-ar="تواريخ مفصلية في التاريخ السعودي">Key Dates in Saudi History</h2>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">1727</span>
+            <p data-en="Imam Muhammad bin Saud founds the First Saudi State in Diriyah" data-ar="الإمام محمد بن سعود يؤسس الدولة السعودية الأولى في الدرعية">Imam Muhammad bin Saud founds the First Saudi State in Diriyah</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">1824</span>
+            <p data-en="Establishment of the Second Saudi State with Riyadh as its capital" data-ar="قيام الدولة السعودية الثانية بالرياض عاصمةً لها">Establishment of the Second Saudi State with Riyadh as its capital</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">1902</span>
+            <p data-en="King Abdulaziz recaptures Riyadh, beginning the unification of the modern state" data-ar="الملك عبد العزيز يستعيد الرياض، مُطلقًا مسيرة توحيد الدولة الحديثة">King Abdulaziz recaptures Riyadh, beginning the unification</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot active"></div>
+          <div class="tl-content">
+            <span class="tl-year">1932</span>
+            <p data-en="Official proclamation of the Kingdom of Saudi Arabia on September 23" data-ar="الإعلان الرسمي عن المملكة العربية السعودية في ٢٣ سبتمبر">Official proclamation of the Kingdom of Saudi Arabia on September 23</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">2016</span>
+            <p data-en="Launch of Vision 2030 — Saudi Arabia's blueprint for economic and social transformation" data-ar="إطلاق رؤية ٢٠٣٠ — خارطة طريق المملكة للتحول الاقتصادي والاجتماعي">Launch of Vision 2030 — Saudi Arabia's blueprint for transformation</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <span class="tl-year">2022</span>
+            <p data-en="Founding Day officially declared a national holiday, celebrating 295 years of Saudi statehood" data-ar="يوم التأسيس يُعلن رسميًا عطلةً وطنية، احتفاءً بـ٢٩٥ عامًا من الدولة السعودية">Founding Day officially declared a national holiday</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-emblem">&#x2605;</div>
+      <h3 data-en="Kingdom of Saudi Arabia" data-ar="المملكة العربية السعودية">Kingdom of Saudi Arabia</h3>
+      <p data-en="A nation built on faith, unity, and a legacy of nearly three centuries." data-ar="أمة بُنيت على الإيمان والوحدة وإرث يمتد لما يقارب ثلاثة قرون.">A nation built on faith, unity, and a legacy of nearly three centuries.</p>
+      <div class="footer-divider"></div>
+      <p class="footer-attribution" data-en="Created by Ahmed Ali — IPS School" data-ar="إعداد: أحمد علي — مدرسة IPS">Created by Ahmed Ali — IPS School</p>
+      <p class="footer-note" data-en="This page is for educational purposes." data-ar="هذه الصفحة لأغراض تعليمية.">This page is for educational purposes.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
