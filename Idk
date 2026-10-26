@@ -1,0 +1,142 @@
+#include <array>
+#include <chrono>
+#include <concepts>
+#include <condition_variable>
+#include <cstdint>
+#include <functional>
+#include <future>
+#include <iostream>
+#include <memory>
+#include <mutex>
+#include <queue>
+#include <random>
+#include <stdexcept>
+#include <thread>
+#include <type_traits>
+#include <vector>
+ 
+class ThreadPool {
+public:
+    explicit ThreadPool(std::size_t n = std::thread::hardware_concurrency()) {
+        if (n == 0) n = 1;
+        for (std::size_t i = 0; i < n; ++i)
+            workers_.emplace_back([this] { worker_loop(); });
+    }
+ 
+    ~ThreadPool() {
+        {
+            std::lock_guard lk(m_);
+            stop_ = true;
+        }
+        cv_.notify_all();
+        for (auto& t : workers_) t.join();
+    }
+ 
+    ThreadPool(const ThreadPool&) = delete;
+    ThreadPool& operator=(const ThreadPool&) = delete;
+ 
+    template <typename F, typename... Args>
+        requires std::invocable<F, Args...>
+    auto submit(F&& f, Args&&... args) -> std::future<std::invoke_result_t<F, Args...>> {
+        using R = std::invoke_result_t<F, Args...>;
+        auto task = std::make_shared<std::packaged_task<R()>>(
+            std::bind(std::forward<F>(f), std::forward<Args>(args)...));
+        auto fut = task->get_future();
+        {
+            std::lock_guard lk(m_);
+            if (stop_) throw std::runtime_error("submit on stopped ThreadPool");
+            queue_.emplace([task] { (*task)(); });
+        }
+        cv_.notify_one();
+        return fut;
+    }
+ 
+    std::size_t size() const { return workers_.size(); }
+ 
+private:
+    void worker_loop() {
+        for (;;) {
+            std::function<void()> job;
+            {
+                std::unique_lock lk(m_);
+                cv_.wait(lk, [this] { return stop_ || !queue_.empty(); });
+                if (stop_ && queue_.empty()) return;
+                job = std::move(queue_.front());
+                queue_.pop();
+            }
+            job();
+        }
+    }
+ 
+    std::vector<std::thread> workers_;
+    std::queue<std::function<void()>> queue_;
+    std::mutex m_;
+    std::condition_variable cv_;
+    bool stop_ = false;
+};
+ 
+// ---------- Compile-time Fibonacci table ----------
+template <std::size_t N>
+constexpr std::array<std::uint64_t, N> make_fib_table() {
+    std::array<std::uint64_t, N> t{};
+    t[0] = 0;
+    if constexpr (N > 1) t[1] = 1;
+    for (std::size_t i = 2; i < N; ++i) t[i] = t[i - 1] + t[i - 2];
+    return t;
+}
+constexpr auto kFib = make_fib_table<50>();
+static_assert(kFib[10] == 55, "fib table is wrong");
+ 
+// ---------- Concept-constrained helper ----------
+template <std::integral T>
+constexpr T clamp_positive(T v) { return v < 0 ? T{0} : v; }
+ 
+// ---------- Monte Carlo pi estimation ----------
+std::uint64_t count_inside_circle(std::uint64_t samples, std::uint64_t seed) {
+    std::mt19937_64 rng(seed);
+    std::uniform_real_distribution<double> dist(0.0, 1.0);
+    std::uint64_t inside = 0;
+    for (std::uint64_t i = 0; i < samples; ++i) {
+        double x = dist(rng), y = dist(rng);
+        if (x * x + y * y <= 1.0) ++inside;
+    }
+    return inside;
+}
+ 
+int main() {
+    using clock = std::chrono::steady_clock;
+ 
+    ThreadPool pool;
+    std::cout << "Thread pool with " << pool.size() << " workers\n";
+ 
+    constexpr std::uint64_t kTotal = 200'000'000;
+    const std::uint64_t tasks = pool.size() * 4;
+    const std::uint64_t per_task = kTotal / tasks;
+ 
+    auto start = clock::now();
+ 
+    std::vector<std::future<std::uint64_t>> futures;
+    futures.reserve(tasks);
+    std::random_device rd;
+    const std::uint64_t base_seed = (std::uint64_t{rd()} << 32) | rd();
+    for (std::uint64_t i = 0; i < tasks; ++i)
+        futures.push_back(pool.submit(count_inside_circle, per_task, base_seed + i));
+ 
+    std::uint64_t inside = 0;
+    for (auto& f : futures) inside += f.get();
+ 
+    double pi = 4.0 * static_cast<double>(inside) / static_cast<double>(per_task * tasks);
+    auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(clock::now() - start).count();
+ 
+    std::cout << "pi ~= " << pi << "  (" << per_task * tasks << " samples, " << ms << " ms)\n";
+    std::cout << "fib(40) from constexpr table = " << kFib[40] << "\n";
+    std::cout << "clamp_positive(-7) = " << clamp_positive(-7) << "\n";
+ 
+    // Exceptions propagate through futures
+    auto bad = pool.submit([]() -> int { throw std::runtime_error("boom from worker"); });
+    try {
+        bad.get();
+    } catch (const std::exception& e) {
+        std::cout << "Caught from future: " << e.what() << "\n";
+    }
+}
